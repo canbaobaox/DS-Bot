@@ -1,17 +1,16 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/images/logo-dark.svg">
-    <img src="docs/images/logo.svg" alt="DS Bot" width="260">
-  </picture>
+  <img src="app/assets/logo.jpg" alt="MindVerse bot" width="260">
 </p>
 
-# DS Bot
+# MindVerse bot
 
 [English](README.md) | 中文
 
 ![版本](https://img.shields.io/badge/版本-v0.2_预览-blue) ![DSH](https://img.shields.io/badge/DSH-0.2.1--rc.4-4D6BFE) ![许可](https://img.shields.io/badge/许可-Apache_2.0-green)
 
-DS Bot 是一个基于 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（简称 dsh）的 bot 插件，插件将 dsh 改造为 bot 形式。你可以与自己创建的 bot 交流、工作。
+MindVerse bot 是一个基于 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（简称 dsh）的多 Bot 工作台，它把 dsh 变成一支常驻的 Bot 团队。你可以创建自己的 Bot，和它们交流、工作。
+
+> MindVerse，由心而生，万象自成。
 
 ![和 Chief 说一句话，它就把 bot 和群聊建好](docs/images/team.zh.png)
 
@@ -19,11 +18,11 @@ DS Bot 是一个基于 [DeepSeek Harness](https://github.com/deepseek-ai/deepsee
 
 **桌面应用（Windows、macOS、Linux）**
 
-桌面应用自带 dsh，不用先装 dsh。在 [Releases](https://github.com/Fei2411/DS-Bot/releases) 里下载：
+桌面应用自带 dsh，不用先装 dsh。在 [Releases](https://github.com/canbaobaox/DS-Bot/releases) 里下载：
 
-- Windows（x64）：`DeepSeek-Bot-<版本>-win-x64.exe`。运行它即可安装，只装给当前用户，不要管理员权限。如果提示“Windows 已保护你的电脑”，点 **更多信息** → **仍要运行**。
-- macOS：Apple 芯片下载 `DeepSeek-Bot-<版本>-mac-arm64.zip`，Intel 下载 `DeepSeek-Bot-<版本>-mac-x64.zip`。Safari 会自动解压；把 **DeepSeek Bot** 拖进 **应用程序**，再打开。如果提示无法检查这个 App，打开 **系统设置** → **隐私与安全性**，点 **仍要打开**。
-- Linux（x64）：`DeepSeek-Bot-<版本>-linux-x86_64.AppImage` 通用于所有发行版——加上可执行权限后打开即可。它通过 FUSE 2 挂载，可能需要先安装（Ubuntu 24.04+ 用 `sudo apt install libfuse2t64`，Fedora 用 `sudo dnf install fuse-libs`，Arch 用 `sudo pacman -S fuse2`）。Ubuntu 24.04 及以后版本会限制 AppImage 需要的沙箱，AppImage 可能因此拒绝启动；Debian/Ubuntu 上的 `DeepSeek-Bot-<版本>-linux-amd64.deb` 没有这个问题，还会加菜单项。
+- Windows（x64）：`MindVerse-bot-<版本>-win-x64.exe`。运行它即可安装，只装给当前用户，不要管理员权限。如果提示“Windows 已保护你的电脑”，点 **更多信息** → **仍要运行**。
+- macOS：Apple 芯片下载 `MindVerse-bot-<版本>-mac-arm64.zip`，Intel 下载 `MindVerse-bot-<版本>-mac-x64.zip`。Safari 会自动解压；把 **MindVerse bot** 拖进 **应用程序**，再打开。如果提示无法检查这个 App，打开 **系统设置** → **隐私与安全性**，点 **仍要打开**。
+- Linux（x64）：`MindVerse-bot-<版本>-linux-x86_64.AppImage` 通用于所有发行版——加上可执行权限后打开即可。它通过 FUSE 2 挂载，可能需要先安装（Ubuntu 24.04+ 用 `sudo apt install libfuse2t64`，Fedora 用 `sudo dnf install fuse-libs`，Arch 用 `sudo pacman -S fuse2`）。Ubuntu 24.04 及以后版本会限制 AppImage 需要的沙箱，AppImage 可能因此拒绝启动；Debian/Ubuntu 上的 `MindVerse-bot-<版本>-linux-amd64.deb` 没有这个问题，还会加菜单项。
 
 第一次打开时，App 会问数据和 Bot 的文件放在哪里，并可以从你的 dsh 复制 Bot 团队（只读取你的 dsh，不改它）。在 App 的设置里配好模型就能用。Windows 版和 Linux 的 AppImage 会自动更新；macOS 版和 Linux 的 deb 有新版本时会提示你下载。
 
@@ -33,7 +32,7 @@ DS Bot 是一个基于 [DeepSeek Harness](https://github.com/deepseek-ai/deepsee
 
 **作为 dsh 插件**
 
-先装好 dsh，并在 dsh 里配好至少一个模型。ds bot 直接使用 dsh 里的模型。
+先装好 dsh，并在 dsh 里配好至少一个模型。MindVerse bot 直接使用 dsh 里的模型。
 
 **dsh Desktop（Windows、macOS）**
 
@@ -41,9 +40,9 @@ DS Bot 是一个基于 [DeepSeek Harness](https://github.com/deepseek-ai/deepsee
 2. **包名或地址** 填 `ds-bot`。在中国大陆，**安装源** 选 **中国大陆镜像源**。
 3. 点 **安装**，再点 **立即启用**。如果提示“下次启动生效”，完全退出 dsh 再打开。
 
-连不上 npm 时，第 2 步也可以填 [Releases](https://github.com/Fei2411/DS-Bot/releases) 里下载的 `ds-bot-0.2.1.tgz` 的完整路径，或者 `github:Fei2411/DS-Bot#v0.2.1&path:/ds-bot`（需要装 Git）。
+连不上 npm 时，第 2 步也可以填 [Releases](https://github.com/canbaobaox/DS-Bot/releases) 里下载的 `ds-bot-0.2.1.tgz` 的完整路径，或者 `github:canbaobaox/DS-Bot#v0.2.1&path:/ds-bot`（需要装 Git）。
 
-DS Bot 0.2.1 及更早的版本在 DSH Desktop 0.2.1-rc.2 及以后的版本里不能自己更新：在插件页移除 `ds-bot`，再添加 `ds-bot`。Bot、聊天和记忆都会保留。
+MindVerse bot 0.2.1 及更早的版本在 DSH Desktop 0.2.1-rc.2 及以后的版本里不能自己更新：在插件页移除 `ds-bot`，再添加 `ds-bot`。Bot、聊天和记忆都会保留。
 
 **dsh Web（Windows、macOS、Linux）**
 
@@ -56,7 +55,7 @@ npx @deepseek-ai/dsh@0.2.1-rc.4 web
 
 **Docker（NAS、Linux 服务器）**
 
-[`docker/`](docker/) 目录构建一个带 dsh Web 和 DS Bot 的镜像，适合 NAS 或其他常开的机器。CI 已配置为向 GHCR 发布 linux/amd64 预构建镜像。容器就是 bot 的沙箱：bot 对挂进容器的目录有完全权限，其他的碰不到。见 [`docker/README.md`](docker/README.md)（英文）。
+[`docker/`](docker/) 目录构建一个带 dsh Web 和 MindVerse bot 的镜像，适合 NAS 或其他常开的机器。CI 已配置为向 GHCR 发布 linux/amd64 预构建镜像。容器就是 bot 的沙箱：bot 对挂进容器的目录有完全权限，其他的碰不到。见 [`docker/README.md`](docker/README.md)（英文）。
 
 ## 配置
 
@@ -64,7 +63,7 @@ npx @deepseek-ai/dsh@0.2.1-rc.4 web
 
 ### 网页搜索
 
-DS Bot 会把 `auto` 搜索 provider 选为整个 profile 的后端。禁用 `web-search-auto` 时，也要为该 profile 选择另一个已注册的搜索 provider。详见[网页搜索说明](ds-bot/README.md#web-search)和[恢复步骤](docs/known-issues.zh.md#关掉-web-search-auto-后所有会话的网页搜索都失败)。
+MindVerse bot 会把 `auto` 搜索 provider 选为整个 profile 的后端。禁用 `web-search-auto` 时，也要为该 profile 选择另一个已注册的搜索 provider。详见[网页搜索说明](ds-bot/README.md#web-search)和[恢复步骤](docs/known-issues.zh.md#关掉-web-search-auto-后所有会话的网页搜索都失败)。
 
 ## 功能
 
@@ -78,13 +77,13 @@ DS Bot 会把 `auto` 搜索 provider 选为整个 profile 的后端。禁用 `we
 
 ### Main bot
 
-这个 bot 作为你的 chief，它拥有非常高的权限，可以管理其他 bot 和群聊。第一次进入 ds bot 时，默认会有一个 main bot 叫 Chief。你可以直接和它对话，让它引导你完成配置。
+这个 bot 作为你的 chief，它拥有非常高的权限，可以管理其他 bot 和群聊。第一次进入 MindVerse bot 时，默认会有一个 main bot 叫 Chief。你可以直接和它对话，让它引导你完成配置。
 
 总之，有问题，找 main bot。
 
 ### 群聊
 
-ds bot 拥有群聊功能。群聊是非常好的多 bot 协作方式，但它会带来非常明显的费用问题。ds bot 为此特意做了优化：在一个群聊中，你需要设置一个管理员。你的消息默认由管理员回复，它会帮你调用其他 bot。你也可以直接 @ 你需要沟通的 bot，它会直接回应你：输入 @，从列表里选 bot 就行。想让 bot 参考另一段对话，点输入框的 + → 引用对话。
+MindVerse bot 拥有群聊功能。群聊是非常好的多 bot 协作方式，但它会带来非常明显的费用问题。MindVerse bot 为此特意做了优化：在一个群聊中，你需要设置一个管理员。你的消息默认由管理员回复，它会帮你调用其他 bot。你也可以直接 @ 你需要沟通的 bot，它会直接回应你：输入 @，从列表里选 bot 就行。想让 bot 参考另一段对话，点输入框的 + → 引用对话。
 
 任何 bot 都可以用 @ 把活派给另一个 bot。接活的 bot 自己去做，群聊照常进行。它干活时会在群里同步进度，群聊、侧边栏和它自己的聊天里也能看到它在做什么。做完后，它把结果发到群里，由派活的 bot 接着回应。要停下它的工作，打开群聊详情。
 
@@ -104,7 +103,7 @@ ds bot 拥有群聊功能。群聊是非常好的多 bot 协作方式，但它�
 
 ### Office 文件
 
-Bot 可以处理 Office 文档：创建和编辑 .docx、.pptx、.xlsx；按稳定 id 读文档结构；检查会让 Office 拒开的包缺陷；定点编辑（批注、修订、域、表格单元格）；幻灯片重排与复制；列出工作簿错误；渲染成图片并按拼图检查。桌面应用已全部带上；在 DSH Desktop 里用 DSH 自己的 Office 运行时加 DS Bot 的命令；在 DSH Web 里检查、校验、编辑类命令可用，从头建文件和渲染页面需要桌面应用或 DSH Desktop。
+Bot 可以处理 Office 文档：创建和编辑 .docx、.pptx、.xlsx；按稳定 id 读文档结构；检查会让 Office 拒开的包缺陷；定点编辑（批注、修订、域、表格单元格）；幻灯片重排与复制；列出工作簿错误；渲染成图片并按拼图检查。桌面应用已全部带上；在 DSH Desktop 里用 DSH 自己的 Office 运行时加 MindVerse bot 的命令；在 DSH Web 里检查、校验、编辑类命令可用，从头建文件和渲染页面需要桌面应用或 DSH Desktop。
 
 ## 数据
 
@@ -116,16 +115,17 @@ Bot 可以处理 Office 文档：创建和编辑 .docx、.pptx、.xlsx；按稳�
 
 ## 致谢
 
-- [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)：ds bot 建在 dsh 的插件系统上。每个 bot 都在 dsh 会话里工作，用的是 dsh 的工具和模型。
+- [DS Bot](https://github.com/Fei2411/DS-Bot)（作者 Fei2411）：MindVerse bot 是 DS Bot 的换肤分支。原项目、原作者与贡献者的署名保留在 [NOTICE](NOTICE) 和 [LICENSE](LICENSE) 中。
+- [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)：MindVerse bot 建在 dsh 的插件系统上。每个 bot 都在 dsh 会话里工作，用的是 dsh 的工具和模型。
 - [esbuild](https://esbuild.github.io/)：用来打包插件的界面代码。
-- 感谢下面这些项目公开的设计思路。ds bot 参考了它们的思路，没有使用它们的代码：
+- 感谢下面这些项目公开的设计思路。MindVerse bot 参考了它们的思路，没有使用它们的代码：
   - [AgentMemoryRepo](https://github.com/AgentMemoryRepo/agentmemoryrepo)：bot 记忆的 Markdown 格式。
   - [OpenAI Codex](https://github.com/openai/codex)：压缩时把用户原话留在摘要旁边，以及搜索聊天记录用的消息锚点。
   - [OpenMausBot](https://github.com/milind-soni/OpenMausBot)：群聊轮流发言和 @ 接力。
   - [Hermes Agent](https://github.com/NousResearch/hermes-agent) 和 [Hermes Bot Mode](https://github.com/NousResearch/Hermes-Bot-Mode)：每个成员在每个群里一个会话，以及交接时带上用户之前的原话。
   - [OpenCode](https://github.com/sst/opencode)、[goose](https://github.com/block/goose)、[pi](https://github.com/badlogic/pi-mono)、[Gemini CLI](https://github.com/google-gemini/gemini-cli)：长对话什么时候压缩，交接笔记写哪些内容。
   - [obelisk](https://github.com/tommy0103/obelisk)：用 SQLite 全文索引搜索聊天记录。
-- 每一位试用 ds bot、提问题、报 bug 的人。
+- 每一位试用 MindVerse bot、提问题、报 bug 的人。
 
 ## 许可
 
@@ -133,6 +133,6 @@ Bot 可以处理 Office 文档：创建和编辑 .docx、.pptx、.xlsx；按稳�
 
 ## 声明
 
-ds bot 是独立的社区项目，**不是 DeepSeek 官方产品**，与 DeepSeek 没有隶属、认可或赞助关系。“DeepSeek”“DeepSeek Harness”等名称是各自所有者的商标，这里只用来说明本插件和什么一起用。
+MindVerse bot 是独立的社区项目，**不是 DeepSeek 官方产品**，与 DeepSeek 没有隶属、认可或赞助关系。“DeepSeek”“DeepSeek Harness”等名称是各自所有者的商标，这里只用来说明本插件和什么一起用。
 
 bot 会消耗你自己的模型额度，也会按你的要求读写文件、运行命令。重要的操作请自己检查。

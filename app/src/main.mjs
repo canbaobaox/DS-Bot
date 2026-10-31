@@ -283,7 +283,7 @@ async function start() {
   ipcMain.handle(IPC.browserImportLive, async (event, sourceId, close) => {
     assertWindow(event)
     const source = (await listSources()).find((item) => item.id === sourceId)
-    if (!source) throw new Error('DeepSeek Bot: an unknown browser profile')
+    if (!source) throw new Error('MindVerse bot: an unknown browser profile')
     let outcome
     try {
       outcome = await importFromBrowser(source, { close: close === true })
@@ -300,9 +300,9 @@ async function start() {
   })
   ipcMain.handle(IPC.browserImportApply, async (event, key, id) => {
     assertWindow(event)
-    if (typeof key !== 'string' || !key.startsWith('bot:')) throw new Error('DeepSeek Bot: a Bot storage key is required')
+    if (typeof key !== 'string' || !key.startsWith('bot:')) throw new Error('MindVerse bot: a Bot storage key is required')
     const pending = cookieImports.take(typeof id === 'string' ? id : '')
-    if (!pending) throw new Error('DeepSeek Bot: this import is no longer pending')
+    if (!pending) throw new Error('MindVerse bot: this import is no longer pending')
     const storage = session.fromPartition(partitionOf(key))
     return applyCookies(storage, pending.cookies)
   })
@@ -373,14 +373,14 @@ async function start() {
 // without the copied Sessions' folders, so the old team's folders are not offered as projects.
 // Before that, the app's own DSH reads every chat of the team once: a newer DSH can write
 // records that this one refuses while the log format stays the same. Such a chat stops the
-// copy, as a newer log format does; 'quit' means the user updates DeepSeek Bot first, and
+// copy, as a newer log format does; 'quit' means the user updates MindVerse bot first, and
 // 'stopped' that the app quit during the copy.
 async function copyTeam(where, newHost, newCheck, signal) {
   const unreadable = await checkTeam(where, newCheck, signal)
   if (signal.aborted) return 'stopped'
   if (unreadable > 0) {
     const t = text()
-    const { response } = await dialog.showMessageBox({ type: 'warning', title: 'DeepSeek Bot', noLink: true, message: t.newer(unreadable), buttons: [t.quit, t.startEmpty], defaultId: 0, cancelId: 0, signal })
+    const { response } = await dialog.showMessageBox({ type: 'warning', title: 'MindVerse bot', noLink: true, message: t.newer(unreadable), buttons: [t.quit, t.startEmpty], defaultId: 0, cancelId: 0, signal })
     if (signal.aborted) return 'stopped'
     if (response === 0) return 'quit'
     saveLocations(where)
@@ -397,11 +397,11 @@ async function copyTeam(where, newHost, newCheck, signal) {
     await warm.stop()
     host = undefined
     const summary = await importTeam({ ...where.import, to: where.dataDir, workspace: where.workspace, dsh: getDshRuntimeVersion(), signal })
-    console.log(`DeepSeek Bot: copied ${String(summary.bots)} Bots and ${String(summary.sessions)} Sessions from ${summary.from}`)
+    console.log(`MindVerse bot: copied ${String(summary.bots)} Bots and ${String(summary.sessions)} Sessions from ${summary.from}`)
   } catch (error) {
     if (signal.aborted) return 'stopped'
     console.error(error)
-    await dialog.showMessageBox({ type: 'warning', title: 'DeepSeek Bot', message: text().failed(error instanceof Error ? error.message : String(error)), signal })
+    await dialog.showMessageBox({ type: 'warning', title: 'MindVerse bot', message: text().failed(error instanceof Error ? error.message : String(error)), signal })
     if (signal.aborted) return 'stopped'
   } finally {
     signal.removeEventListener('abort', stopWarm)
@@ -431,14 +431,14 @@ async function checkTeam(where, newCheck, signal) {
     try {
       signal.throwIfAborted()
       const { unreadable } = await check.start()
-      if (unreadable.length > 0) console.warn(`DeepSeek Bot: this DSH cannot read ${unreadable.join(', ')}`)
+      if (unreadable.length > 0) console.warn(`MindVerse bot: this DSH cannot read ${unreadable.join(', ')}`)
       return unreadable.length
     } finally {
       signal.removeEventListener('abort', stop)
       await check.stop()
     }
   } catch (error) {
-    if (!signal.aborted) console.error('DeepSeek Bot: the chats were not checked before the copy:', error)
+    if (!signal.aborted) console.error('MindVerse bot: the chats were not checked before the copy:', error)
     return 0
   } finally {
     mainWindow?.setProgressBar(-1)
@@ -461,13 +461,13 @@ async function moveData(workspace) {
     for (const current of new Set([workspace, places.workspace])) {
       const problem = moveProblem({ from: places.dataDir, to, workspace: current, dshHome, program: app.isPackaged ? programFolder() : undefined })
       if (problem === undefined) continue
-      await dialog.showMessageBox(owner, { type: 'warning', title: 'DeepSeek Bot', message: problem === 'dsh' ? t.inDsh(dshHome) : t[MOVE_PROBLEMS[problem]], buttons: ['OK'] })
+      await dialog.showMessageBox(owner, { type: 'warning', title: 'MindVerse bot', message: problem === 'dsh' ? t.inDsh(dshHome) : t[MOVE_PROBLEMS[problem]], buttons: ['OK'] })
       return true
     }
     return false
   }
   if (await refused()) return false
-  const { response } = await dialog.showMessageBox(owner, { type: 'question', title: 'DeepSeek Bot', noLink: true, message: t.moveConfirm(to), detail: t.moveDetail(places.dataDir), buttons: [t.move, t.cancel], defaultId: 0, cancelId: 1 })
+  const { response } = await dialog.showMessageBox(owner, { type: 'question', title: 'MindVerse bot', noLink: true, message: t.moveConfirm(to), detail: t.moveDetail(places.dataDir), buttons: [t.move, t.cancel], defaultId: 0, cancelId: 1 })
   if (response !== 0 || stopping || await refused()) return false
   const signal = copyAbort.signal
   copying = (async () => {
@@ -481,7 +481,7 @@ async function moveData(workspace) {
     }
     // Another DSH on the same data would go on writing while the copy is made.
     if (teamInUse(places.dataDir)) {
-      await dialog.showMessageBox({ type: 'warning', title: 'DeepSeek Bot', message: t.moveInUse })
+      await dialog.showMessageBox({ type: 'warning', title: 'MindVerse bot', message: t.moveInUse })
       app.relaunch()
       return
     }
@@ -498,7 +498,7 @@ async function moveData(workspace) {
     } catch (error) {
       if (signal.aborted) return
       console.error(error)
-      await dialog.showMessageBox({ type: 'warning', title: 'DeepSeek Bot', message: t.moveFailed(error instanceof Error ? error.message : String(error)) })
+      await dialog.showMessageBox({ type: 'warning', title: 'MindVerse bot', message: t.moveFailed(error instanceof Error ? error.message : String(error)) })
     } finally {
       mainWindow?.setProgressBar(-1)
     }
@@ -555,7 +555,7 @@ async function askRestartNow(version) {
   // After a failed start, fail() installs the update itself.
   if (failed) return false
   const t = localeText(UPDATE_TEXT)
-  const options = { type: 'info', title: 'DeepSeek Bot', message: t.ready(version), detail: t.readyDetail, buttons: [t.restart, t.later], defaultId: 0, cancelId: 1, noLink: true }
+  const options = { type: 'info', title: 'MindVerse bot', message: t.ready(version), detail: t.readyDetail, buttons: [t.restart, t.later], defaultId: 0, cancelId: 1, noLink: true }
   const { response } = await (mainWindow ? dialog.showMessageBox(mainWindow, options) : dialog.showMessageBox(options))
   return response === 0
 }
@@ -563,7 +563,7 @@ async function askRestartNow(version) {
 async function askDownloadNow(version) {
   if (failed) return false
   const t = localeText(UPDATE_TEXT)
-  const options = { type: 'info', title: 'DeepSeek Bot', message: t.available(version), detail: t.availableDetail, buttons: [t.download, t.later], defaultId: 0, cancelId: 1, noLink: true }
+  const options = { type: 'info', title: 'MindVerse bot', message: t.available(version), detail: t.availableDetail, buttons: [t.download, t.later], defaultId: 0, cancelId: 1, noLink: true }
   const { response } = await (mainWindow ? dialog.showMessageBox(mainWindow, options) : dialog.showMessageBox(options))
   return response === 0
 }
@@ -594,7 +594,7 @@ function createWindow() {
     // The window never squeezes the chat: RAIL_WIDTH + MIN_CHAT from ds-bot's
     // src/client/frame-layout.js is the avatar rail plus the smallest chat column.
     width: 1320, height: 860, minWidth: 508, minHeight: 480,
-    title: 'DeepSeek Bot', show: false, icon: iconFile,
+    title: 'MindVerse bot', show: false, icon: iconFile,
     backgroundColor: mica ? '#00000000' : dark ? '#1b1b1c' : '#ffffff',
     // Frameless as in DSH Desktop: the caption buttons overlay the page's band. They keep the
     // sidebar's colors until the page sends the colors of the surface under them.
@@ -766,7 +766,7 @@ function setMenu() {
 function assertWindow(event) {
   const contents = mainWindow?.webContents
   if (contents === undefined || event.sender !== contents || event.senderFrame !== contents.mainFrame
-    || !event.senderFrame.url.startsWith(`${origin}/`)) throw new Error('DeepSeek Bot: rejected IPC from an unknown page')
+    || !event.senderFrame.url.startsWith(`${origin}/`)) throw new Error('MindVerse bot: rejected IPC from an unknown page')
 }
 
 function fromWindow(event) {
@@ -786,7 +786,7 @@ async function fail(error) {
   const throwaway = Boolean(process.env.DS_BOT_HOME)
   const t = localeText(UPDATE_TEXT)
   const next = found ? `\n\n${found.page ? t.onFailurePage(found.version) : t.onFailure(found.version)}` : ''
-  dialog.showErrorBox('DeepSeek Bot', `${text().notStarted}\n\n${error instanceof Error ? error.message : String(error)}${next}`)
+  dialog.showErrorBox('MindVerse bot', `${text().notStarted}\n\n${error instanceof Error ? error.message : String(error)}${next}`)
   if (found?.page) {
     if (!throwaway) await electronShell.openExternal(found.page)
     app.quit()
