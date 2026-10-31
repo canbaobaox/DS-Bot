@@ -88,7 +88,10 @@ jobs:
         run: npm pack --dry-run
 
       - name: Publish
-        if: github.event_name == 'release' || (!inputs.dry_run && github.ref == 'refs/heads/main')
+        # Fork decision (MindVerse bot): npm Trusted Publishing is configured for the
+        # upstream repository only, so publishing from this fork would fail. Releases
+        # ship the desktop installers; the npm package is not needed.
+        if: false
         run: |
           tag="$(node -p "require('./package.json').version.includes('-') ? 'next' : 'latest'")"
           echo "Publishing $(node -p "require('./package.json').version") with the npm tag $tag"
@@ -96,7 +99,8 @@ jobs:
 
       # The release keeps the package file for installs without npm.
       - name: Attach the package to the release
-        if: github.event_name == 'release'
+        # Fork decision (MindVerse bot): skip the npm tgz attachment, same reason as above.
+        if: false
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.event.release.tag_name }}
@@ -126,8 +130,8 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v4
         with:
-          name: DeepSeek-Bot-win-x64
-          path: app/dist-pack/DeepSeek-Bot-*-win-x64.exe
+          name: MindVerse-bot-win-x64
+          path: app/dist-pack/MindVerse-bot-*-win-x64.exe
           retention-days: 7
           if-no-files-found: error
           compression-level: 0
@@ -138,7 +142,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.event.release.tag_name }}
         run: |
-          installer="dist-pack/DeepSeek-Bot-$(node -p "require('./package.json').version")-win-x64.exe"
+          installer="dist-pack/MindVerse-bot-$(node -p "require('./package.json').version")-win-x64.exe"
           gh release upload "$TAG" "$installer" "$installer.blockmap" dist-pack/latest.yml --clobber
 
   app-macos:
@@ -169,8 +173,8 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v4
         with:
-          name: DeepSeek-Bot-mac-${{ matrix.arch }}
-          path: app/dist-pack/DeepSeek-Bot-*-mac-${{ matrix.arch }}.zip
+          name: MindVerse-bot-mac-${{ matrix.arch }}
+          path: app/dist-pack/MindVerse-bot-*-mac-${{ matrix.arch }}.zip
           retention-days: 7
           if-no-files-found: error
           compression-level: 0
@@ -180,7 +184,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.event.release.tag_name }}
         run: |
-          zip="dist-pack/DeepSeek-Bot-$(node -p "require('./package.json').version")-mac-${{ matrix.arch }}.zip"
+          zip="dist-pack/MindVerse-bot-$(node -p "require('./package.json').version")-mac-${{ matrix.arch }}.zip"
           gh release upload "$TAG" "$zip" --clobber
 
   app-linux:
@@ -209,15 +213,15 @@ jobs:
         # The dry run never uploads, so it checks here that every file the release attaches exists.
         run: |
           version="$(node -p "require('./package.json').version")"
-          ls -l "dist-pack/DeepSeek-Bot-$version-linux-x86_64.AppImage" "dist-pack/DeepSeek-Bot-$version-linux-amd64.deb" dist-pack/latest-linux.yml
+          ls -l "dist-pack/MindVerse-bot-$version-linux-x86_64.AppImage" "dist-pack/MindVerse-bot-$version-linux-amd64.deb" dist-pack/latest-linux.yml
       - name: Keep the packages for real-device checks
         if: github.event_name == 'workflow_dispatch'
         uses: actions/upload-artifact@v4
         with:
-          name: DeepSeek-Bot-linux-x64
+          name: MindVerse-bot-linux-x64
           path: |
-            app/dist-pack/DeepSeek-Bot-*-linux-x86_64.AppImage
-            app/dist-pack/DeepSeek-Bot-*-linux-amd64.deb
+            app/dist-pack/MindVerse-bot-*-linux-x86_64.AppImage
+            app/dist-pack/MindVerse-bot-*-linux-amd64.deb
           retention-days: 7
           if-no-files-found: error
           compression-level: 0
@@ -229,4 +233,4 @@ jobs:
         # The AppImage carries its block map inside the file, so there is no .blockmap to attach.
         run: |
           version="$(node -p "require('./package.json').version")"
-          gh release upload "$TAG" "dist-pack/DeepSeek-Bot-$version-linux-x86_64.AppImage" "dist-pack/DeepSeek-Bot-$version-linux-amd64.deb" dist-pack/latest-linux.yml --clobber
+          gh release upload "$TAG" "dist-pack/MindVerse-bot-$version-linux-x86_64.AppImage" "dist-pack/MindVerse-bot-$version-linux-amd64.deb" dist-pack/latest-linux.yml --clobber
