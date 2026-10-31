@@ -175,10 +175,10 @@ var ZH = {
   "Add a provider": "添加服务商",
   "Needs an API key": "需要 API key",
   "Key set": "已设置 key",
-  "Key set outside DS Bot": "key 在 DS Bot 之外设置",
+  "Key set outside MindVerse bot": "key 在 MindVerse bot 之外设置",
   "No models": "没有模型",
   "{count} models": "{count} 个模型",
-  "This key comes from outside DS Bot, such as an environment variable, and cannot be changed here.": "这个 key 来自 DS Bot 之外（例如环境变量），这里改不了。",
+  "This key comes from outside MindVerse bot, such as an environment variable, and cannot be changed here.": "这个 key 来自 MindVerse bot 之外（例如环境变量），这里改不了。",
   "and {count} more": "还有 {count} 个",
   "Remove {name}? Bots on its models need another model.": "删除 {name}？用它的模型的 Bot 要换一个模型。",
   "Remove provider": "删除服务商",
@@ -210,7 +210,7 @@ var ZH = {
   "Sign in to DeepSeek": "登录 DeepSeek 账号",
   "Enter a DeepSeek API key": "填入 DeepSeek API key",
   "Open settings to set up a custom model": "打开设置配置自定义模型",
-  "DS Bot": "DS Bot",
+  "MindVerse bot": "MindVerse bot",
   // Header
   "Message {name}": "给 {name} 发消息",
   Message: "发消息",
@@ -295,7 +295,7 @@ var ZH = {
   Rename: "重命名",
   "Add instructions in Bot settings": "在 Bot 设置里添加说明",
   "No scheduled tasks yet. To add one, tell the Bot in its chat what to do and when.": "还没有定时任务。要添加，在对话里告诉 Bot 做什么、什么时候做。",
-  "The browser is in DSH Desktop and the DeepSeek Bot app.": "浏览器在 DSH 桌面版和 DeepSeek Bot 应用里。",
+  "The browser is in DSH Desktop and the MindVerse bot app.": "浏览器在 DSH 桌面版和 MindVerse bot 应用里。",
   "New tab": "新标签页",
   "Close tab": "关闭标签页",
   "Open {title}": "打开 {title}",
@@ -482,8 +482,11 @@ var ZH = {
   Sky: "天蓝",
   Tangerine: "橘",
   Cobalt: "钴蓝",
+  Candy: "樱花粉",
+  Haze: "薰衣草紫",
+  Mist: "雾蓝",
   // Themes
-  DeepSeek: "DeepSeek",
+  MindVerse: "心月",
   Mono: "黑白",
   Paper: "纸张",
   Moonlight: "月光",
@@ -516,7 +519,7 @@ var ZH = {
   "No group chats yet.": "还没有群聊。",
   "A group chat lets several Bots work on one thing with you.": "在群聊里，几个 Bot 和你一起做一件事。",
   "Back to group chats": "返回群聊列表",
-  "DS Bot settings": "DS Bot 设置",
+  "MindVerse bot settings": "MindVerse bot 设置",
   "Settings pages": "设置页面",
   "Models, providers, and the rest of DeepSeek Harness": "模型、服务商和 DeepSeek Harness 的其他设置",
   "Harness settings": "Harness 设置",
@@ -546,14 +549,14 @@ var ZH = {
   "{n} h": "{n} 小时",
   "{n} d": "{n} 天",
   // Plugin updates
-  "DS Bot {version} is available": "DS Bot {version} 可以更新",
-  "Updating DS Bot…": "正在更新 DS Bot…",
-  "DS Bot {version} is installed. Restart DSH to use it.": "DS Bot {version} 已安装，重启 DSH 后生效",
-  "DS Bot {version} is installed.": "DS Bot {version} 已安装。",
-  "DS Bot update": "DS Bot 更新",
-  "DS Bot {version}": "DS Bot {version}",
+  "MindVerse bot {version} is available": "MindVerse bot {version} 可以更新",
+  "Updating MindVerse bot…": "正在更新 MindVerse bot…",
+  "MindVerse bot {version} is installed. Restart DSH to use it.": "MindVerse bot {version} 已安装，重启 DSH 后生效",
+  "MindVerse bot {version} is installed.": "MindVerse bot {version} 已安装。",
+  "MindVerse bot update": "MindVerse bot 更新",
+  "MindVerse bot {version}": "MindVerse bot {version}",
   "Update installed": "更新已安装",
-  "Restart DSH to start using DS Bot {version}.": "重启 DSH 后开始使用 DS Bot {version}。",
+  "Restart DSH to start using MindVerse bot {version}.": "重启 DSH 后开始使用 MindVerse bot {version}。",
   "You have {version}.": "当前版本 {version}。",
   "The update did not finish: {reason}": "更新没有完成：{reason}",
   "What's new": "更新说明",
@@ -563,7 +566,7 @@ var ZH = {
   "DSH update": "DSH 更新",
   "DSH {version}": "DSH {version}",
   "Restart DSH to start using DSH {version}.": "重启 DSH 后开始使用 DSH {version}。",
-  "Update DS Bot {version} first.": "先更新 DS Bot {version}。",
+  "Update MindVerse bot {version} first.": "先更新 MindVerse bot {version}。",
   "Open updates": "打开更新",
   // Command palette
   Messages: "消息",
@@ -951,11 +954,11 @@ var ZH = {
   "Compared with the {count} days before": "与再往前 {count} 天相比",
   "{share}% of all usage from {span}": "占 {span} 全部用量的 {share}%",
   // About
-  "About DS Bot": "关于 DS Bot",
+  "About MindVerse bot": "关于 MindVerse bot",
   "Version {version}": "版本 {version}",
-  "Star DS Bot on GitHub": "在 GitHub 上给 DS Bot 点 Star",
+  "Star MindVerse bot on GitHub": "在 GitHub 上给 MindVerse bot 点 Star",
   "{count} stars": "{count} 个 Star",
-  "If DS Bot helps you, a star on GitHub helps more people find it.": "如果 DS Bot 对你有用，欢迎在 GitHub 上点个 Star，让更多人看到它。",
+  "If MindVerse bot helps you, a star on GitHub helps more people find it.": "如果 MindVerse bot 对你有用，欢迎在 GitHub 上点个 Star，让更多人看到它。",
   Updates: "更新",
   "Check for updates": "检查更新",
   "Checking…": "正在检查…",
@@ -970,7 +973,7 @@ var ZH = {
   "{version} is available": "{version} 已发布",
   "Installed from a local folder; update it there.": "从本地文件夹安装，请在那里更新。",
   "Updates are not offered for this install.": "这种安装方式不提供更新。",
-  "Updates come with the DeepSeek Bot app.": "随 DeepSeek Bot 应用一起更新。",
+  "Updates come with the MindVerse bot app.": "随 MindVerse bot 应用一起更新。",
   Links: "链接",
   "Source code": "源代码",
   "Release notes": "发布说明",
@@ -986,7 +989,7 @@ var ZH = {
   Show: "查看",
   Hide: "收起",
   "GitHub issue": "GitHub issue",
-  "Opens a new issue in the DS Bot repository with all of this filled in. Nothing is sent until you submit it there.": "在 DS Bot 仓库新建一个 issue，并填好以上内容。你在 GitHub 上提交之前，什么都不会发出。",
+  "Opens a new issue in the MindVerse bot repository with all of this filled in. Nothing is sent until you submit it there.": "在 MindVerse bot 仓库新建一个 issue，并填好以上内容。你在 GitHub 上提交之前，什么都不会发出。",
   "Report on GitHub": "在 GitHub 上报告",
   "Copied the diagnostics.": "已复制诊断信息。",
   "Could not copy. Select the text below and copy it.": "无法复制。请选中下面的文字手动复制。",
@@ -998,7 +1001,7 @@ var ZH = {
   "Recent errors": "最近的错误",
   "Recent errors · {count}": "最近的错误 · {count}",
   "No errors recorded.": "没有错误记录。",
-  "Failed model calls and DS Bot problems show here, newest first.": "模型调用失败和 DS Bot 的问题会显示在这里，最新的在前。",
+  "Failed model calls and MindVerse bot problems show here, newest first.": "模型调用失败和 MindVerse bot 的问题会显示在这里，最新的在前。",
   "Model call": "模型调用",
   "This window": "这个窗口",
   "Error log": "错误日志",
@@ -1118,7 +1121,7 @@ var ZH = {
 };
 var HOST_ERRORS = [
   [/^Model (.+) is not available\. Available: (.*)$/, "模型 $1 不可用。可用的：$2"],
-  [/^The API key for (.+) is set outside DS Bot and cannot be changed here$/, "$1 的 API key 是在 DS Bot 之外设置的，这里改不了"],
+  [/^The API key for (.+) is set outside MindVerse bot and cannot be changed here$/, "$1 的 API key 是在 MindVerse bot 之外设置的，这里改不了"],
   [/^(.+) takes no API key here$/, "$1 不能在这里填 API key"],
   [/^(.+) is already set up$/, "$1 已经设置过了"],
   [/^DSH offers no provider (.+)$/, "DSH 没有服务商 $1"],
@@ -1212,14 +1215,14 @@ var HOST_ZH = {
   "This side chat is no longer here.": "这个侧边对话已经不在了。",
   "This side question is no longer here.": "这个侧边提问已经不在了。",
   "This Bot has not called a model yet. Send a normal message first.": "这个 Bot 还没有调用过模型，请先正常发一条消息。",
-  "DS Bot restarted before this answer finished.": "DS Bot 在回答完成前重启了。",
+  "MindVerse bot restarted before this answer finished.": "MindVerse bot 在回答完成前重启了。",
   "The model called a tool again after being told not to, so this aside was not answered.": "模型在被要求不要调用工具之后又调用了工具，所以这次没有回答。",
   "The model wrote nothing.": "模型没有写任何内容。",
   "Nothing to ask": "没有要问的内容",
   "Nothing to open": "没有要打开的内容",
   "Nothing to cancel": "没有要取消的内容",
   "Nothing to close": "没有要关闭的内容",
-  "DS Bot is still loading this chat.": "DS Bot 还在加载这个对话。"
+  "MindVerse bot is still loading this chat.": "MindVerse bot 还在加载这个对话。"
 };
 Object.assign(ZH, HOST_ZH);
 var fill = (text, params) => params ? text.replace(/\{(\w+)\}/g, (match, name) => name in params ? String(params[name]) : match) : text;
@@ -1315,8 +1318,8 @@ function failureLabel(code, message) {
 }
 var URL_LIMIT = 7e3;
 var WHAT_MAX = 2e3;
-var PASTE_NOTE = "DS Bot copied the diagnostics to the clipboard. Paste them here.";
-var REST_NOTE = "The recent errors do not fit in the link. DS Bot copied the diagnostics to the clipboard: paste them below this line.";
+var PASTE_NOTE = "MindVerse bot copied the diagnostics to the clipboard. Paste them here.";
+var REST_NOTE = "The recent errors do not fit in the link. MindVerse bot copied the diagnostics to the clipboard: paste them below this line.";
 function issueUrl(base, { what = "", diagnostics }) {
   const text = what.trim().slice(0, WHAT_MAX);
   const title = text.split("\n")[0].slice(0, 80);
@@ -1375,6 +1378,9 @@ var INKS = {
   sky: ["#0AA8D6", "#2EE6E0"],
   tangerine: ["#FF6900", "#FF8A2E"],
   cobalt: ["#082DFF", "#5C78FF"],
+  candy: ["#F4A9C6", "#F8C4D8"],
+  haze: ["#C5B3E6", "#D8C9F0"],
+  mist: ["#A9C8EC", "#BFD8F5"],
   black: ["#000000", "#FFFFFF"],
   brown: ["#A27952", "#855C36"],
   red: ["#FF3E51", "#E02135"],
@@ -1389,7 +1395,7 @@ var INKS = {
   aurora: ["#00B8D4", "#2EE6E0"]
 };
 var GRADIENTS = { aurora: [[0, "#A4FFB0"], [0.42, "#00F0E4"], [1, "#2E9EF7"]] };
-var ACCENT_INKS = ["deepseek", "charcoal", "graphite", "rose", "sky", "tangerine", "cobalt"];
+var ACCENT_INKS = ["deepseek", "candy", "haze", "mist", "charcoal", "graphite", "rose", "sky", "tangerine", "cobalt"];
 var LEGACY_INKS = { kimi: "charcoal", zai: "graphite", minimax: "rose", stepfun: "sky", mimo: "tangerine", qwen: "cobalt" };
 var isHex = (color) => typeof color === "string" && /^#[0-9a-f]{6}$/i.test(color);
 var luminance = (hex) => [1, 3, 5].map((index) => parseInt(hex.slice(index, index + 2), 16) / 255).map((channel) => channel <= 0.04045 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4).reduce((sum, channel, index) => sum + channel * [0.2126, 0.7152, 0.0722][index], 0);
@@ -1786,9 +1792,9 @@ function teamActions({ call: call2, after, partFor, roster, ui: ui2, live, cards
 var THEME_KEYS = ["bg", "sidebar", "bubble", "card", "text", "user", "userText", "accent"];
 var THEMES = {
   deepseek: {
-    label: "DeepSeek",
-    light: { bg: "#fcfcfc", sidebar: "#f7f7f7", bubble: "#eeeeee", card: "#ffffff", text: "#141414", user: "#070707", userText: "#fcfcfc", accent: "#4d6bfe" },
-    dark: { bg: "#141414", sidebar: "#1b1b1b", bubble: "#262626", card: "#1f1f1f", text: "#f2f2f2", user: "#f2f2f2", userText: "#141414", accent: "#5b7bff" }
+    label: "MindVerse",
+    light: { bg: "#FFF9F5", sidebar: "#FBEFF3", bubble: "#F5E9EF", card: "#ffffff", text: "#1A1626", user: "#6F74E8", userText: "#141414", accent: "#6F74E8" },
+    dark: { bg: "#171423", sidebar: "#1D1930", bubble: "#28233D", card: "#201C33", text: "#F2EDFA", user: "#9BA1FB", userText: "#171423", accent: "#9BA1FB" }
   },
   mono: {
     label: "Mono",
@@ -9777,10 +9783,10 @@ function UpdateButton({ useUpdate, actions }) {
     setDshError("");
     void actions.installDshUpdate().catch((failure) => setDshError(hostText(failure?.message ?? String(failure))));
   };
-  const label = phase === "installing" ? t("Updating DS Bot…") : dshPhase === "installing" ? t("Updating DSH…") : phase === "installed" ? t("DS Bot {version} is installed. Restart DSH to use it.", { version: update.installed ?? update.latest }) : phase === "updated" ? t("DS Bot {version} is installed.", { version: update.installed ?? update.latest }) : dshPhase === "installed" ? t("Restart DSH to start using DSH {version}.", { version: dsh.installed ?? dsh.verified }) : update?.available ? t("DS Bot {version} is available", { version: update.latest }) : t("DSH {version} is available", { version: dsh?.verified });
+  const label = phase === "installing" ? t("Updating MindVerse bot…") : dshPhase === "installing" ? t("Updating DSH…") : phase === "installed" ? t("MindVerse bot {version} is installed. Restart DSH to use it.", { version: update.installed ?? update.latest }) : phase === "updated" ? t("MindVerse bot {version} is installed.", { version: update.installed ?? update.latest }) : dshPhase === "installed" ? t("Restart DSH to start using DSH {version}.", { version: dsh.installed ?? dsh.verified }) : update?.available ? t("MindVerse bot {version} is available", { version: update.latest }) : t("DSH {version} is available", { version: dsh?.verified });
   const message = error || (phase === "failed" ? update.error : "");
   const dshMessage = dshError || (dshPhase === "failed" ? dsh?.error : "");
-  const dshText = dshPhase === "installed" ? t("Restart DSH to start using DSH {version}.", { version: dsh.installed ?? dsh.verified }) : dsh?.available === false && dsh?.blockedBy ? t("Update DS Bot {version} first.", { version: dsh.blockedBy }) : t("You have {version}.", { version: dsh?.current });
+  const dshText = dshPhase === "installed" ? t("Restart DSH to start using DSH {version}.", { version: dsh.installed ?? dsh.verified }) : dsh?.available === false && dsh?.blockedBy ? t("Update MindVerse bot {version} first.", { version: dsh.blockedBy }) : t("You have {version}.", { version: dsh?.current });
   return (0, import_react18.createElement)(
     import_react18.Fragment,
     null,
@@ -9797,12 +9803,12 @@ function UpdateButton({ useUpdate, actions }) {
     }, (0, import_react18.createElement)(CloudDownloadIcon, { done: phase === "installed" || phase === "updated" }), phase === "failed" || dshPhase === "failed" ? (0, import_react18.createElement)("span", { className: "bt-update-dot", "aria-hidden": true }) : null),
     open && box ? (0, import_react_dom3.createPortal)((0, import_react18.createElement)(
       "div",
-      { className: "bt-update-pop", role: "dialog", "aria-label": update?.available || phase !== "idle" ? t("DS Bot update") : t("DSH update"), style: box },
+      { className: "bt-update-pop", role: "dialog", "aria-label": update?.available || phase !== "idle" ? t("MindVerse bot update") : t("DSH update"), style: box },
       update?.available || phase !== "idle" ? (0, import_react18.createElement)(
         import_react18.Fragment,
         null,
-        (0, import_react18.createElement)("div", { className: "bt-update-title" }, phase === "installed" || phase === "updated" ? t("Update installed") : t("DS Bot {version}", { version: update.latest })),
-        (0, import_react18.createElement)("div", { className: "bt-update-text" }, phase === "installed" ? t("Restart DSH to start using DS Bot {version}.", { version: update.installed ?? update.latest }) : phase === "updated" ? t("DS Bot {version} is installed.", { version: update.installed ?? update.latest }) : t("You have {version}.", { version: update.current })),
+        (0, import_react18.createElement)("div", { className: "bt-update-title" }, phase === "installed" || phase === "updated" ? t("Update installed") : t("MindVerse bot {version}", { version: update.latest })),
+        (0, import_react18.createElement)("div", { className: "bt-update-text" }, phase === "installed" ? t("Restart DSH to start using MindVerse bot {version}.", { version: update.installed ?? update.latest }) : phase === "updated" ? t("MindVerse bot {version} is installed.", { version: update.installed ?? update.latest }) : t("You have {version}.", { version: update.current })),
         message ? (0, import_react18.createElement)("div", { className: "bt-update-error", role: "alert" }, t("The update did not finish: {reason}", { reason: message })) : null,
         (0, import_react18.createElement)(
           "div",
@@ -10095,9 +10101,9 @@ function BotReturn({ wide, useSurface, actions }) {
   if (mode !== "agent") return null;
   return (0, import_react18.createElement)(
     "button",
-    { type: "button", className: "bt-return", "aria-label": t("DS Bot"), title: t("DS Bot"), onClick: () => actions.setSurface("bot") },
+    { type: "button", className: "bt-return", "aria-label": t("MindVerse bot"), title: t("MindVerse bot"), onClick: () => actions.setSurface("bot") },
     (0, import_react18.createElement)(BotMark, { look: MAIN_LOOK, size: 20 }),
-    wide ? (0, import_react18.createElement)("span", { className: "bt-return-name" }, t("DS Bot")) : null
+    wide ? (0, import_react18.createElement)("span", { className: "bt-return-name" }, t("MindVerse bot")) : null
   );
 }
 var RETURN_CSS = `
@@ -10114,7 +10120,7 @@ function BrandMark({ size = 24 }) {
   return (0, import_react18.createElement)("span", { className: "bt-brand-whale" }, (0, import_react18.createElement)(BotMark, { look: MAIN_LOOK, size }));
 }
 function BrandName() {
-  return (0, import_react18.createElement)("span", { style: { fontWeight: 600, fontSize: 14 } }, "DS Bot");
+  return (0, import_react18.createElement)("span", { style: { fontWeight: 600, fontSize: 14 } }, "MindVerse bot");
 }
 var SIDEBAR_CSS = `
 .bt-confirm{width:260px;max-width:72vw;padding:10px 12px 12px;display:flex;flex-direction:column;gap:10px}
@@ -10137,7 +10143,7 @@ var SIDEBAR_CSS = `
 [class*="_footArea"]:has(.bt-foot-account)>[class*="_settingsArea"]{grid-column:3}
 [class*="_footArea"]:has(.bt-foot-account)>[class*="_settingsArea"] button[class*="_trigger"] [class*="_label"]{display:none!important}
 
-/* The update cloud springs in when a newer DS Bot shows up; its arrow drops in a
+/* The update cloud springs in when a newer MindVerse bot shows up; its arrow drops in a
    loop while the install runs. */
 .bt-round.bt-update{position:relative;color:var(--bt-accent,#4D6BFE);animation:bt-update-in ${SPRING_SHAPE.duration}ms ${SPRING_SHAPE.easing}}
 .bt-round.bt-update svg{width:17px;height:17px}
@@ -10707,7 +10713,7 @@ var SIDE_TOKEN = "/side ";
 var GROUP_REFUSAL = "Side chat is only available in a Bot's private chat.";
 var ATTACHMENT_REFUSAL = "/side does not take attachments.";
 var EMPTY_REFUSAL = "Write a question after /side.";
-var LOADING_REFUSAL = "DS Bot is still loading this chat.";
+var LOADING_REFUSAL = "MindVerse bot is still loading this chat.";
 function sideSurface(roster, sessionId) {
   if (!roster?.ready) return "unknown";
   if (roster.roomsById?.[sessionId]) return "group";
@@ -15963,7 +15969,7 @@ function entrySummary(entry) {
   if (entry.source === "turn") return failureLabel(entry.code, entry.text);
   return entry.text;
 }
-var SOURCES = { turn: "Model call", host: "DS Bot", api: "DS Bot", browser: "This window" };
+var SOURCES = { turn: "Model call", host: "MindVerse bot", api: "MindVerse bot", browser: "This window" };
 function issueWindow() {
   if (window.dshDesktop !== void 0) return { go: (url) => {
     window.open(url, "_blank");
@@ -16046,7 +16052,7 @@ function FeedbackPage({ actions, run: run2, Section, Row: Row3 }) {
       preview ? (0, import_react41.createElement)("div", { className: "bt-set-row bt-fb-preview" }, (0, import_react41.createElement)("pre", { tabIndex: 0, "aria-label": t("Diagnostics") }, report?.markdown || t("Loading…"))) : null,
       (0, import_react41.createElement)(
         Row3,
-        { label: t("GitHub issue"), hint: t("Opens a new issue in the DS Bot repository with all of this filled in. Nothing is sent until you submit it there.") },
+        { label: t("GitHub issue"), hint: t("Opens a new issue in the MindVerse bot repository with all of this filled in. Nothing is sent until you submit it there.") },
         (0, import_react41.createElement)("button", { type: "button", className: "bt-fb-primary", onClick: openIssue }, t("Report on GitHub"))
       )
     ),
@@ -16059,7 +16065,7 @@ function FeedbackPage({ actions, run: run2, Section, Row: Row3 }) {
     (0, import_react41.createElement)(
       Section,
       { key: "errors", title: report ? t("Recent errors · {count}", { count: total }) : t("Recent errors") },
-      shown.length === 0 ? (0, import_react41.createElement)(Row3, { label: t("No errors recorded."), hint: t("Failed model calls and DS Bot problems show here, newest first.") }) : shown.map((entry, index) => (0, import_react41.createElement)(
+      shown.length === 0 ? (0, import_react41.createElement)(Row3, { label: t("No errors recorded."), hint: t("Failed model calls and MindVerse bot problems show here, newest first.") }) : shown.map((entry, index) => (0, import_react41.createElement)(
         "div",
         { key: `${entry.time}-${index}`, className: "bt-set-row bt-fb-entry", title: entry.text },
         (0, import_react41.createElement)("span", { className: "bt-fb-dot", "data-level": entry.level, "aria-hidden": true }),
@@ -16067,7 +16073,7 @@ function FeedbackPage({ actions, run: run2, Section, Row: Row3 }) {
           "div",
           { className: "bt-set-copy" },
           (0, import_react41.createElement)("span", { className: "bt-fb-text" }, entrySummary(entry)),
-          (0, import_react41.createElement)("span", { className: "bt-set-hint" }, [whenText(entry.time), entry.bot, entry.where, t(SOURCES[entry.source] ?? "DS Bot")].filter(Boolean).join(" · "))
+          (0, import_react41.createElement)("span", { className: "bt-set-hint" }, [whenText(entry.time), entry.bot, entry.where, t(SOURCES[entry.source] ?? "MindVerse bot")].filter(Boolean).join(" · "))
         ),
         entry.code ? (0, import_react41.createElement)("span", { className: "bt-tag bt-fb-code" }, entry.status ? `${entry.code} ${entry.status}` : entry.code) : null
       )),
@@ -16139,12 +16145,12 @@ var import_react42 = require("react");
 var CHEER_MS = 1800;
 var starCount = (count) => new Intl.NumberFormat(dateLocale(), { notation: "compact", maximumFractionDigits: 1 }).format(count);
 function botHint(update) {
-  if (update.phase === "installing") return t("Updating DS Bot…");
-  if (update.phase === "installed") return t("Restart DSH to start using DS Bot {version}.", { version: update.installed ?? update.latest });
-  if (update.phase === "updated") return t("DS Bot {version} is installed.", { version: update.installed ?? update.latest });
+  if (update.phase === "installing") return t("Updating MindVerse bot…");
+  if (update.phase === "installed") return t("Restart DSH to start using MindVerse bot {version}.", { version: update.installed ?? update.latest });
+  if (update.phase === "updated") return t("MindVerse bot {version} is installed.", { version: update.installed ?? update.latest });
   if (update.phase === "failed") return t("The update did not finish: {reason}", { reason: hostText(update.error ?? "") });
-  if (update.available) return t("DS Bot {version} is available", { version: update.latest });
-  if (update.source === "app") return t("Updates come with the DeepSeek Bot app.");
+  if (update.available) return t("MindVerse bot {version} is available", { version: update.latest });
+  if (update.source === "app") return t("Updates come with the MindVerse bot app.");
   if (update.enabled === false) return t("Update checks are off.");
   if (update.source === "path") return t("Installed from a local folder; update it there.");
   if (!update.checkedAt) return null;
@@ -16176,7 +16182,7 @@ function dshHint(dsh, shown) {
   if (dsh.phase === "installing") return t("Updating DSH…");
   if (dsh.phase === "installed") return t("Restart DSH to start using DSH {version}.", { version: dsh.installed ?? dsh.verified });
   if (dsh.phase === "failed") return t("The update did not finish: {reason}", { reason: hostText(dsh.error ?? "") });
-  if (dsh.available === false && dsh.blockedBy) return t("Update DS Bot {version} first.", { version: dsh.blockedBy });
+  if (dsh.available === false && dsh.blockedBy) return t("Update MindVerse bot {version} first.", { version: dsh.blockedBy });
   if (shown) return t("DSH {version} is available", { version: dsh.verified });
   return t("Version {version}", { version: dsh.current });
 }
@@ -16238,7 +16244,7 @@ function AboutPage({ useUpdate, actions, run: run2, Section, Row: Row3 }) {
       (0, import_react42.createElement)(
         "div",
         { className: "bt-about-copy" },
-        (0, import_react42.createElement)("span", { className: "bt-about-name" }, "DS Bot"),
+        (0, import_react42.createElement)("span", { className: "bt-about-name" }, "MindVerse bot"),
         update.current ? (0, import_react42.createElement)("span", { className: "bt-about-version" }, t("Version {version}", { version: update.current })) : null
       ),
       repo ? (0, import_react42.createElement)(
@@ -16248,18 +16254,18 @@ function AboutPage({ useUpdate, actions, run: run2, Section, Row: Row3 }) {
           href: repo,
           target: "_blank",
           rel: "noopener noreferrer",
-          title: t("Star DS Bot on GitHub"),
-          "aria-label": stars === null ? t("Star DS Bot on GitHub") : `${t("Star DS Bot on GitHub")} · ${t("{count} stars", { count: stars })}`
+          title: t("Star MindVerse bot on GitHub"),
+          "aria-label": stars === null ? t("Star MindVerse bot on GitHub") : `${t("Star MindVerse bot on GitHub")} · ${t("{count} stars", { count: stars })}`
         },
         (0, import_react42.createElement)("span", { className: "bt-star-main" }, (0, import_react42.createElement)("span", { className: "bt-star-icon" }, (0, import_react42.createElement)(StarLineIcon)), "Star"),
         stars === null ? null : (0, import_react42.createElement)("span", { className: "bt-star-count" }, starCount(stars))
       ) : null
     ),
-    repo ? (0, import_react42.createElement)("p", { key: "ask", className: "bt-about-ask" }, t("If DS Bot helps you, a star on GitHub helps more people find it.")) : null,
+    repo ? (0, import_react42.createElement)("p", { key: "ask", className: "bt-about-ask" }, t("If MindVerse bot helps you, a star on GitHub helps more people find it.")) : null,
     (0, import_react42.createElement)(
       Section,
       { key: "updates", title: t("Updates") },
-      (0, import_react42.createElement)(Row3, { label: "DS Bot", hint: ownRow?.hint ?? botHint(update) }, botControl, update.available && update.notesUrl ? (0, import_react42.createElement)("a", linkProps(update.notesUrl), t("What's new")) : null),
+      (0, import_react42.createElement)(Row3, { label: "MindVerse bot", hint: ownRow?.hint ?? botHint(update) }, botControl, update.available && update.notesUrl ? (0, import_react42.createElement)("a", linkProps(update.notesUrl), t("What's new")) : null),
       dsh?.current ? (0, import_react42.createElement)(Row3, { label: "DeepSeek Harness", hint: dshHint(dsh, dshShown) }, dshControl) : null
     ),
     (0, import_react42.createElement)(
@@ -16339,7 +16345,7 @@ function ProvidersPage({ actions, run: run2, Section }) {
 function keyState(key) {
   if (key === null) return null;
   if (!key.configured) return ["missing", t("Needs an API key")];
-  return key.writable ? ["set", t("Key set")] : ["outside", t("Key set outside DS Bot")];
+  return key.writable ? ["set", t("Key set")] : ["outside", t("Key set outside MindVerse bot")];
 }
 function ProviderRow({ provider, apply: apply2, actions, open, onToggle }) {
   const [confirm, setConfirm] = (0, import_react43.useState)(false);
@@ -16367,7 +16373,7 @@ function ProviderRow({ provider, apply: apply2, actions, open, onToggle }) {
       "div",
       { className: "bt-secret-edit" },
       provider.key?.writable ? (0, import_react43.createElement)(KeyEditor, { provider, apply: apply2, actions }) : null,
-      provider.key && !provider.key.writable ? (0, import_react43.createElement)("div", { className: "bt-set-hint" }, t("This key comes from outside DS Bot, such as an environment variable, and cannot be changed here.")) : null,
+      provider.key && !provider.key.writable ? (0, import_react43.createElement)("div", { className: "bt-set-hint" }, t("This key comes from outside MindVerse bot, such as an environment variable, and cannot be changed here.")) : null,
       provider.models.length > 0 ? (0, import_react43.createElement)(
         "div",
         { className: "bt-secret-edit-block" },
@@ -16579,7 +16585,7 @@ var PROVIDERS_CSS = `
 // src/client/settings.js
 var import_react44 = require("react");
 var capitalize2 = (word) => word[0].toUpperCase() + word.slice(1);
-var SETTINGS_PAGES = [["general", "General"], ["models", "Models"], ["bots", "Bots"], ["groups", "Group chats"], ["connectors", "Connectors"], ["capabilities", "Capabilities"], ["browser", "Browser"], ["schedules", "Scheduled tasks"], ["usage", "Usage"], ["secrets", "Secrets"], ["feedback", "Feedback"], ["about", "About DS Bot"]];
+var SETTINGS_PAGES = [["general", "General"], ["models", "Models"], ["bots", "Bots"], ["groups", "Group chats"], ["connectors", "Connectors"], ["capabilities", "Capabilities"], ["browser", "Browser"], ["schedules", "Scheduled tasks"], ["usage", "Usage"], ["secrets", "Secrets"], ["feedback", "Feedback"], ["about", "About MindVerse bot"]];
 var PAGE_ICONS = { ...SETTINGS_ICONS, models: SlidersIcon, connectors: ConnectorIcon, capabilities: PlugIcon, browser: ConnectorIcon, schedules: ClockIcon, secrets: KeyIcon, feedback: FeedbackIcon, about: InfoIcon };
 function SetSection({ title, className = "", children }) {
   return (0, import_react44.createElement)("section", { className: `bt-set-section ${className}`.trim() }, (0, import_react44.createElement)("h3", null, title), (0, import_react44.createElement)("div", { className: "bt-set-card" }, children));
@@ -16639,7 +16645,7 @@ function GeneralPage({ roster, actions, run: run2 }) {
   const prefs = roster.prefs ?? {};
   const themes = allThemes();
   const current = themes[prefs.theme] ? prefs.theme : "deepseek";
-  const [custom, setCustom] = (0, import_react44.useState)(prefs.accent ?? "#4d6bfe");
+  const [custom, setCustom] = (0, import_react44.useState)(prefs.accent ?? themes[current].light.accent);
   const timer = (0, import_react44.useRef)(0);
   (0, import_react44.useEffect)(() => () => clearTimeout(timer.current), []);
   const pickCustom = (value) => {
@@ -16899,7 +16905,7 @@ function SettingsDialog({ page, id, roster, actions, useUpdate, leaving = false 
     (0, import_react44.createElement)("div", { className: "bt-scrim", onMouseDown: close }),
     (0, import_react44.createElement)(
       "div",
-      { className: "bt-settings", role: "dialog", "aria-modal": true, "aria-label": t("DS Bot settings") },
+      { className: "bt-settings", role: "dialog", "aria-modal": true, "aria-label": t("MindVerse bot settings") },
       (0, import_react44.createElement)(
         "nav",
         { ref: nav.box, className: "bt-settings-nav", "aria-label": t("Settings pages") },
@@ -17377,7 +17383,7 @@ function BrowserCards({ bot, sessionId, roster, actions, useBrowserTabs, useBrow
     actions.browserEnsure?.(bot.id);
   }, [bot.id]);
   if (roster.browser !== true || !actions.browserShow) {
-    return (0, import_react47.createElement)("div", { className: "bt-muted" }, t("The browser is in DSH Desktop and the DeepSeek Bot app."));
+    return (0, import_react47.createElement)("div", { className: "bt-muted" }, t("The browser is in DSH Desktop and the MindVerse bot app."));
   }
   if (state.ids.length === 0) {
     return (0, import_react47.createElement)(

@@ -243,7 +243,7 @@ export function apply(ctx) {
     }, 'ds-bot: app update status')
   }
 
-  // The DeepSeek Bot app's own updater; its state goes beside the host's answer as ownApp,
+  // The MindVerse bot app's own updater; its state goes beside the host's answer as ownApp,
   // which the About row turns into the app's update state and buttons.
   const ownAppUpdates = globalThis.dsBotApp?.updates ?? null
   if (ownAppUpdates?.state && ownAppUpdates.subscribe) {
@@ -644,7 +644,7 @@ export function apply(ctx) {
     update.set(previous => ({ ...previous, ...value }))
     wakeUpdate()
   }
-  // The DSH the newest released DS Bot verified installs the same way.
+  // The DSH the newest released MindVerse bot verified installs the same way.
   actions.installDshUpdate = async () => {
     const dsh = await call('dsh-update-install')
     update.set(previous => ({ ...previous, dsh }))

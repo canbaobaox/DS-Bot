@@ -7,11 +7,13 @@ import { createSource } from './sources.js'
 // tokens derive from them, so a registered theme recolors the whole team UI.
 
 const THEME_KEYS = ['bg', 'sidebar', 'bubble', 'card', 'text', 'user', 'userText', 'accent']
+// The default theme carries the MindVerse pastel look (pink/lavender/mist on
+// cream). The key stays `deepseek` so saved preferences keep working.
 const THEMES = {
   deepseek: {
-    label: 'DeepSeek',
-    light: { bg: '#fcfcfc', sidebar: '#f7f7f7', bubble: '#eeeeee', card: '#ffffff', text: '#141414', user: '#070707', userText: '#fcfcfc', accent: '#4d6bfe' },
-    dark: { bg: '#141414', sidebar: '#1b1b1b', bubble: '#262626', card: '#1f1f1f', text: '#f2f2f2', user: '#f2f2f2', userText: '#141414', accent: '#5b7bff' },
+    label: 'MindVerse',
+    light: { bg: '#FFF9F5', sidebar: '#FBEFF3', bubble: '#F5E9EF', card: '#ffffff', text: '#1A1626', user: '#6F74E8', userText: '#141414', accent: '#6F74E8' },
+    dark: { bg: '#171423', sidebar: '#1D1930', bubble: '#28233D', card: '#201C33', text: '#F2EDFA', user: '#9BA1FB', userText: '#171423', accent: '#9BA1FB' },
   },
   mono: {
     label: 'Mono',
