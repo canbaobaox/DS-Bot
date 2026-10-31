@@ -6,11 +6,18 @@
 
 English | [中文](README.zh.md)
 
-![version](https://img.shields.io/badge/version-v0.2_preview-blue) ![DSH](https://img.shields.io/badge/DSH-0.2.1--rc.4-4D6BFE) ![license](https://img.shields.io/badge/license-Apache_2.0-green)
+![version](https://img.shields.io/badge/version-v1.0.1-blue) ![DSH](https://img.shields.io/badge/DSH-0.2.1--rc.4-4D6BFE) ![license](https://img.shields.io/badge/license-Apache_2.0-green)
 
-MindVerse bot is a bot workbench built on [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH). It turns DSH into a team of long-lived bots. You create your own bots, then talk and work with them.
+**MindVerse bot** is a multi-agent workbench built on [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH). It turns DSH into a team of long-lived bots: you create your own bots, then talk and work with them.
 
 > MindVerse — born from the heart, a universe of its own.
+
+MindVerse is made for creators. It ships with 4 preset bot roles for visual work — ask Chief and it sets them up for you:
+
+- **Prompt coach**: teaches AI image & video prompting, hands you paste-ready prompts
+- **Pose advisor**: storyboard pose reference, hundreds of poses on demand
+- **Wardrobe advisor**: outfit reference without models, 1400+ looks by style
+- **Space analyst**: spatial geometry reading of images (depth capabilities expanding)
 
 ![Say one sentence to Chief, and it sets up the bots and the group chat](docs/images/team.png)
 
@@ -18,7 +25,7 @@ MindVerse bot is a bot workbench built on [DeepSeek Harness](https://github.com/
 
 **Desktop app (Windows, macOS, Linux)**
 
-The desktop app brings its own DSH, so you don't need to install DSH first. Download it from [Releases](https://github.com/canbaobaox/DS-Bot/releases):
+The desktop app brings its own DSH, so you don't need to install DSH first. Download it from [Releases](https://github.com/canbaobaox/MindVerse-bot/releases):
 
 - Windows (x64): `MindVerse-bot-<version>-win-x64.exe`. Run it; it installs for your user only, without administrator rights. If Windows shows "Windows protected your PC", select **More info** → **Run anyway**.
 - macOS: `MindVerse-bot-<version>-mac-arm64.zip` for an Apple chip, `MindVerse-bot-<version>-mac-x64.zip` for Intel. Safari unzips it by itself; drag **MindVerse bot** into **Applications** and open it. When macOS says it cannot check the app, open **System Settings** → **Privacy & Security** and select **Open Anyway**.
@@ -40,7 +47,7 @@ First install DSH and set up at least one model in it. MindVerse bot uses the mo
 2. In **Package name or address**, enter `ds-bot`. In mainland China, set **Registry** to **Mainland China mirror**.
 3. Select **Install**, then **Enable now**. If DSH says the change takes effect at the next start, quit DSH completely and open it again.
 
-If npm is not reachable, in step 2 you can also enter the full path of `ds-bot-0.2.1.tgz` downloaded from [Releases](https://github.com/canbaobaox/DS-Bot/releases), or `github:canbaobaox/DS-Bot#v0.2.1&path:/ds-bot` (needs Git).
+If npm is not reachable, in step 2 you can also enter the full path of `ds-bot-0.2.1.tgz` downloaded from [Releases](https://github.com/canbaobaox/MindVerse-bot/releases), or `github:canbaobaox/MindVerse-bot#v0.2.1&path:/ds-bot` (needs Git).
 
 MindVerse bot 0.2.1 and earlier cannot update themselves in DSH Desktop 0.2.1-rc.2 or later: on the Plugins page, remove `ds-bot` and add `ds-bot` again. The Bots, chats and memory stay.
 

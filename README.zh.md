@@ -6,11 +6,18 @@
 
 [English](README.md) | 中文
 
-![版本](https://img.shields.io/badge/版本-v0.2_预览-blue) ![DSH](https://img.shields.io/badge/DSH-0.2.1--rc.4-4D6BFE) ![许可](https://img.shields.io/badge/许可-Apache_2.0-green)
+![版本](https://img.shields.io/badge/版本-v1.0.1-blue) ![DSH](https://img.shields.io/badge/DSH-0.2.1--rc.4-4D6BFE) ![许可](https://img.shields.io/badge/许可-Apache_2.0-green)
 
-MindVerse bot 是一个基于 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（简称 dsh）的多 Bot 工作台，它把 dsh 变成一支常驻的 Bot 团队。你可以创建自己的 Bot，和它们交流、工作。
+**MindVerse bot** 是一个基于 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（简称 DSH）的多智能体工作台，它把 DSH 变成一支常驻的 Bot 团队。你可以创建自己的 Bot，和它们交流、工作。
 
 > MindVerse，由心而生，万象自成。
+
+MindVerse 为创作者而生，内置 4 个视觉创作预置 Bot 角色——跟 Chief 说一句话，它就帮你建好：
+
+- **提示词教练**：教你写 AI 生图与图生视频提示词，给出可直接粘贴的提示词
+- **姿势顾问**：分镜姿势参考，数百组姿势随取随用
+- **衣装顾问**：无模特服装参考，1400+ 套衣装按风格挑选
+- **空间分析师**：图片空间几何解读（深度分析能力持续接入中）
 
 ![和 Chief 说一句话，它就把 bot 和群聊建好](docs/images/team.zh.png)
 
@@ -18,7 +25,7 @@ MindVerse bot 是一个基于 [DeepSeek Harness](https://github.com/deepseek-ai/
 
 **桌面应用（Windows、macOS、Linux）**
 
-桌面应用自带 dsh，不用先装 dsh。在 [Releases](https://github.com/canbaobaox/DS-Bot/releases) 里下载：
+桌面应用自带 dsh，不用先装 dsh。在 [Releases](https://github.com/canbaobaox/MindVerse-bot/releases) 里下载：
 
 - Windows（x64）：`MindVerse-bot-<版本>-win-x64.exe`。运行它即可安装，只装给当前用户，不要管理员权限。如果提示“Windows 已保护你的电脑”，点 **更多信息** → **仍要运行**。
 - macOS：Apple 芯片下载 `MindVerse-bot-<版本>-mac-arm64.zip`，Intel 下载 `MindVerse-bot-<版本>-mac-x64.zip`。Safari 会自动解压；把 **MindVerse bot** 拖进 **应用程序**，再打开。如果提示无法检查这个 App，打开 **系统设置** → **隐私与安全性**，点 **仍要打开**。
@@ -40,7 +47,7 @@ MindVerse bot 是一个基于 [DeepSeek Harness](https://github.com/deepseek-ai/
 2. **包名或地址** 填 `ds-bot`。在中国大陆，**安装源** 选 **中国大陆镜像源**。
 3. 点 **安装**，再点 **立即启用**。如果提示“下次启动生效”，完全退出 dsh 再打开。
 
-连不上 npm 时，第 2 步也可以填 [Releases](https://github.com/canbaobaox/DS-Bot/releases) 里下载的 `ds-bot-0.2.1.tgz` 的完整路径，或者 `github:canbaobaox/DS-Bot#v0.2.1&path:/ds-bot`（需要装 Git）。
+连不上 npm 时，第 2 步也可以填 [Releases](https://github.com/canbaobaox/MindVerse-bot/releases) 里下载的 `ds-bot-0.2.1.tgz` 的完整路径，或者 `github:canbaobaox/MindVerse-bot#v0.2.1&path:/ds-bot`（需要装 Git）。
 
 MindVerse bot 0.2.1 及更早的版本在 DSH Desktop 0.2.1-rc.2 及以后的版本里不能自己更新：在插件页移除 `ds-bot`，再添加 `ds-bot`。Bot、聊天和记忆都会保留。
 
